@@ -14,8 +14,6 @@ class ActionModule(ActionBase):
 
     def run(self, tmp=None, task_vars=None):
         self._display.warning('This is how you can debug')
-        result = super(ActionModule, self).run(tmp, task_vars)
-        return result
         if task_vars is None:
             task_vars = dict()
             for arg in self._task.args:
